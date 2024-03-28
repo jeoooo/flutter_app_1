@@ -2,10 +2,12 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:simple_icons/simple_icons.dart';
 
 import 'widgets/third_party_auth_login_button.dart';
+import 'widgets/twitter_navbar.dart';
 
 class TwitterDashboard extends StatefulWidget {
   const TwitterDashboard({Key? key}) : super(key: key);
@@ -22,74 +24,50 @@ class _TwitterDashboardState extends State<TwitterDashboard> {
       navigationBar: TwitterNavbar(),
       child: SafeArea(
         child: Column(
-          children: [],
+          children: [
+            Tweet(),
+          ],
         ),
       ),
     );
   }
 }
 
-class TwitterNavbar extends StatelessWidget
-    implements ObstructingPreferredSizeWidget {
-  const TwitterNavbar({
+class Tweet extends StatelessWidget {
+  const Tweet({
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
-    return CupertinoNavigationBar(
-      automaticallyImplyLeading: false,
-      middle: Padding(
-        padding: EdgeInsets.only(left: 12.0, right: 12.0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    return Row(
+      children: [
+        Column(
           children: [
-            Stack(
+            Text('dp'),
+            Text('dp'),
+          ],
+        ),
+        Column(
+          children: [
+            Row(
               children: [
-                CircleAvatar(
-                  radius: 20 / 1.2,
-                  backgroundColor: Colors.grey,
-                  child: Icon(
-                    Icons.person,
-                    color: Colors.white,
-                  ),
-                ),
-                Positioned(
-                  right: 0,
-                  top: 0,
-                  child: Container(
-                    padding: EdgeInsets.all(2),
-                    decoration: BoxDecoration(
-                      color: Colors.blue,
-                      shape: BoxShape.circle,
-                    ),
-                    constraints: BoxConstraints(
-                      minWidth: 10,
-                      minHeight: 10,
-                    ),
-                  ),
-                ),
+                Text('name'),
+                Text('@username'),
+                Text('time'),
               ],
             ),
-            SvgPicture.asset(
-              'assets/twitter_logo.svg',
-              height: 26,
-            ),
-            SvgPicture.asset(
-              'assets/feature_stroke_icon.svg',
-              height: 26,
+            Text('tweet'),
+            Row(
+              children: [
+                Text('tweet'),
+                Text('tweet'),
+                Text('tweet'),
+              ],
             ),
           ],
         ),
-      ),
+      ],
     );
-  }
-
-  @override
-  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
-
-  @override
-  bool shouldFullyObstruct(BuildContext context) {
-    return false;
   }
 }
