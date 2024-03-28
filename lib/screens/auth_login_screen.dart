@@ -27,14 +27,13 @@ class _AuthLoginState extends State<AuthLogin> {
       ),
       child: SafeArea(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
               child: Column(
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(
-                        left: 12.0, right: 12.0, bottom: 24),
+                        left: 12.0, right: 12.0, bottom: 100.0, top: 125.0),
                     child: Text(
                       'See what\'s \nhappening in the\nworld right now.',
                       style: TextStyle(
@@ -57,12 +56,12 @@ class _AuthLoginState extends State<AuthLogin> {
                   OrDivider(),
                   SizedBox(
                     width: 300,
-                    height: 0,
+                    height: 40,
                     child: CupertinoButton(
                       onPressed: () {
                         // Add your button's onPressed logic here
                       },
-                      color: CupertinoColors.white,
+                      color: Color(0xFF1DA1F2),
                       borderRadius: BorderRadius.circular(60),
                       padding: EdgeInsets.zero,
                       child: Row(
@@ -75,7 +74,8 @@ class _AuthLoginState extends State<AuthLogin> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 26.0, right: 26.0),
+                    padding: const EdgeInsets.only(
+                        left: 26.0, right: 26.0, top: 20.0),
                     child: AuthTermsAndConditions(),
                   ),
                   SizedBox(height: 24.0),

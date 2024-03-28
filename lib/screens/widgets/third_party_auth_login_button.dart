@@ -34,10 +34,10 @@ class ThirdPartyAuthLoginButton extends StatelessWidget {
           ),
         ),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+          // mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Icon(simpleIcons!, color: simpleIconsColors),
-            SizedBox(width: 8.0),
+            SizedBox(width: 16.0),
             Text(
               buttonText!,
               style: TextStyle(
