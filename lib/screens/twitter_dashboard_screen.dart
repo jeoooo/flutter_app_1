@@ -64,11 +64,54 @@ class Tweet extends StatelessWidget {
                     backgroundColor: Colors.blue, // Replace with desired color
                     radius: 32, // Adjust the size as needed
                   ),
+                  SizedBox(width: 8.0),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('Juan Dela Cruz @username 12h'),
-                      Text('tweet'),
+                      RichText(
+                        text: TextSpan(
+                          children: [
+                            TextSpan(
+                              text: 'Juan Dela Cruz',
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black),
+                            ),
+                            TextSpan(text: ' '),
+                            TextSpan(
+                              text: '@username',
+                              style: TextStyle(
+                                color: Colors.grey,
+                                fontSize: 20,
+                              ),
+                            ),
+                            TextSpan(
+                              text: '•12h',
+                              style: TextStyle(
+                                color: Colors.grey,
+                                fontSize: 20,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(height: 12.0),
+                      RichText(
+                        text: TextSpan(
+                          children: [
+                            TextSpan(
+                              text:
+                                  'UXR/UX: You can only bring one item to a remote island to assist your research of native use of tools and usability. What do you bring? #TellMeAboutYou',
+                              style: TextStyle(
+                                fontSize: 20,
+                                // fontWeight: FontWeight.bold,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                     ],
                   ),
                 ],
@@ -93,6 +136,8 @@ class Tweet extends StatelessWidget {
                           Colors.blue, // Replace with desired color
                       radius: 32 / 1.5, // Adjust the size as needed
                     ),
+                    SizedBox(width: 18.0),
+                    Text('Show this thread')
                   ],
                 ),
               ),
