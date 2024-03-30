@@ -20,6 +20,8 @@ class TwitterNavbar extends StatelessWidget
         return _buildProfileNavbar();
       case TwitterNavbarType.search:
         return _buildSearchNavbar();
+      case TwitterNavbarType.messages:
+        return _buildTwitterMessages();
     }
   }
 
@@ -145,6 +147,62 @@ class TwitterNavbar extends StatelessWidget
     );
   }
 
+  Widget _buildTwitterMessages() {
+    return CupertinoNavigationBar(
+      automaticallyImplyLeading: false,
+      middle: Padding(
+        padding: EdgeInsets.only(left: 12.0, right: 12.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Stack(
+              children: [
+                CircleAvatar(
+                  radius: 20 / 1.2,
+                  backgroundColor: Colors.grey,
+                  child: Icon(
+                    Icons.person,
+                    color: Colors.white,
+                  ),
+                ),
+                Positioned(
+                  right: 0,
+                  top: 0,
+                  child: Container(
+                    padding: EdgeInsets.all(2),
+                    decoration: BoxDecoration(
+                      color: Colors.blue,
+                      shape: BoxShape.circle,
+                    ),
+                    constraints: BoxConstraints(
+                      minWidth: 10,
+                      minHeight: 10,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'Messages',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w900,
+                  color: Colors.black, // Replace with your desired color
+                ),
+              ),
+            ),
+            SvgPicture.asset(
+              'assets/settings_icon.svg',
+              height: 26,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
   @override
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 
@@ -154,7 +212,4 @@ class TwitterNavbar extends StatelessWidget
   }
 }
 
-enum TwitterNavbarType {
-  profile,
-  search,
-}
+enum TwitterNavbarType { profile, search, messages }
