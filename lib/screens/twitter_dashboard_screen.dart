@@ -66,7 +66,88 @@ class _TwitterDashboardState extends State<TwitterDashboard> {
               child: SafeArea(
                 child: Column(
                   children: [
-                    Text('data'),
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border(
+                          bottom: BorderSide(
+                            color: Colors.grey,
+                            width: 0.5,
+                          ),
+                        ),
+                      ),
+                      height: 40,
+                      width: MediaQuery.of(context).size.width,
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 16.0, bottom: 8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              'Trends for you',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w900,
+                                fontSize: 26,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                      ),
+                      width: MediaQuery.of(context).size.width,
+                      child: Padding(
+                        padding: const EdgeInsets.all(32.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              'No new trends for you',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w900,
+                                fontSize: 26,
+                              ),
+                            ),
+                            SizedBox(height: 6.0),
+                            Text(
+                              'It seems like there’s not a lot to show you right now, but you can see trends for other areas',
+                              style: TextStyle(
+                                color: Color(0xFF687684),
+                                fontWeight: FontWeight.normal,
+                                fontSize: 16,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                            SizedBox(height: 8.0),
+                            ElevatedButton(
+                              onPressed: () {
+                                // Add your button onPressed logic here
+                              },
+                              style: ElevatedButton.styleFrom(
+                                elevation: 0,
+                                backgroundColor: Colors.blue,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(30),
+                                ),
+                              ),
+                              child: Text(
+                                'Change Location',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
