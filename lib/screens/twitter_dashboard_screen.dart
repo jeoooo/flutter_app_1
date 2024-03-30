@@ -96,50 +96,28 @@ class Tweet extends StatelessWidget {
                           ],
                         ),
                       ),
-                      SizedBox(height: 12.0),
-                      RichText(
-                        text: TextSpan(
-                          children: [
-                            TextSpan(
-                              text:
-                                  'UXR/UX: You can only bring one item to a remote island to assist your research of native use of tools and usability. What do you bring? #TellMeAboutYou',
-                              style: TextStyle(
-                                fontSize: 20,
-                                // fontWeight: FontWeight.bold,
-                                color: Colors.black,
+                      SizedBox(height: 8.0),
+                      Container(
+                        width: 300,
+                        child: RichText(
+                          text: TextSpan(
+                            children: [
+                              TextSpan(
+                                text:
+                                    'UXR/UX: You can only bring one item to a remote island to assist your research of native use of tools and usability. What do you bring? #TellMeAboutYou',
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  // fontWeight: FontWeight.bold,
+                                  color: Colors.black,
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                     ],
                   ),
                 ],
-              ),
-              Padding(
-                padding:
-                    const EdgeInsets.only(left: 24.0, top: 8.0, bottom: 8.0),
-                child: Container(
-                  height: 30, // Adjust the height as needed
-                  child: VerticalDivider(
-                    color: Colors.black, // Replace with desired color
-                    thickness: 1, // Adjust the thickness as needed
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 10.0),
-                child: Row(
-                  children: [
-                    CircleAvatar(
-                      backgroundColor:
-                          Colors.blue, // Replace with desired color
-                      radius: 32 / 1.5, // Adjust the size as needed
-                    ),
-                    SizedBox(width: 18.0),
-                    Text('Show this thread')
-                  ],
-                ),
               ),
             ],
           ),
