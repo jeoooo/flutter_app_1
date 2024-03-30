@@ -7,6 +7,7 @@ import 'package:flutter_app_1/screens/widgets/twitter_navbar.dart';
 import 'package:flutter_app_1/screens/widgets/twitter_navbar_item.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'widgets/news_feed.dart';
+import 'widgets/twitter_message_search_bar.dart';
 import 'widgets/twitter_search.dart';
 
 class TwitterDashboard extends StatefulWidget {
@@ -54,37 +55,7 @@ class _TwitterDashboardState extends State<TwitterDashboard> {
               backgroundColor: Colors.white,
               child: SafeArea(
                 child: Column(children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      border: Border(
-                        bottom: BorderSide(
-                          color: Colors.grey,
-                          width: 0.5,
-                        ),
-                      ),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.only(
-                          left: 8.0, right: 8.0, bottom: 8.0),
-                      child: Container(
-                        width: MediaQuery.of(context).size.width,
-                        child: CupertinoTextField(
-                          prefix: Padding(
-                            padding: EdgeInsets.only(left: 16.0),
-                            child: SvgPicture.asset(
-                              'assets/search_icon.svg',
-                              height: 14,
-                            ),
-                          ),
-                          placeholder: 'Search Twitter',
-                          decoration: BoxDecoration(
-                            color: Colors.grey[200],
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
+                  TwitterMessageSearchBar(),
                 ]),
               ),
             );
