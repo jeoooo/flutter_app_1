@@ -26,3 +26,7 @@ flutter:
   assets:
     - assets/twitter_logo.svg
     - assets/feature_stroke_icon.svg
+    - assets/comment_icon.svg
+    - assets/heart_icon.svg
+    - assets/retweet_icon.svg
+    - assets/share_icon.svg

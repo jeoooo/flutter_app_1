@@ -25,10 +25,7 @@ class _TwitterDashboardState extends State<TwitterDashboard> {
       child: SafeArea(
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Tweet(),
-            ),
+            Tweet(),
           ],
         ),
       ),
@@ -48,80 +45,111 @@ class Tweet extends StatelessWidget {
         border: Border(
           bottom: BorderSide(
             color: Colors.grey, // Replace with desired color
-            width: 2, // Adjust the width as needed
+            width: 1, // Adjust the width as needed
           ),
         ),
       ),
-      child: Row(
-        children: [
-          // avatar + thread
-          Column(
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Container(
+          child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Row(
+              CircleAvatar(
+                backgroundColor: Colors.blue,
+                radius: 32,
+              ),
+              SizedBox(width: 8.0),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  CircleAvatar(
-                    backgroundColor: Colors.blue, // Replace with desired color
-                    radius: 32, // Adjust the size as needed
+                  RichText(
+                    text: TextSpan(
+                      text: 'Juan Dela Cruz',
+                      style: TextStyle(
+                          fontSize: 18,
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold),
+                      children: [
+                        TextSpan(
+                          text: ' ',
+                          style: TextStyle(fontSize: 18, color: Colors.grey),
+                        ),
+                        TextSpan(
+                          text: '@username',
+                          style: TextStyle(fontSize: 18, color: Colors.grey),
+                        ),
+                        TextSpan(
+                          text: ' • ',
+                          style: TextStyle(fontSize: 18, color: Colors.grey),
+                        ),
+                        TextSpan(
+                          text: '12h',
+                          style: TextStyle(fontSize: 18, color: Colors.grey),
+                        ),
+                      ],
+                    ),
                   ),
-                  SizedBox(width: 8.0),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                  Padding(
+                    padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
+                    child: Container(
+                      width: 300,
+                      child: Text(
+                          'datadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadata'),
+                    ),
+                  ),
+                  Row(
                     children: [
-                      RichText(
-                        text: TextSpan(
-                          children: [
-                            TextSpan(
-                              text: 'Juan Dela Cruz',
-                              style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black),
-                            ),
-                            TextSpan(text: ' '),
-                            TextSpan(
-                              text: '@username',
-                              style: TextStyle(
-                                color: Colors.grey,
-                                fontSize: 20,
-                              ),
-                            ),
-                            TextSpan(
-                              text: '•12h',
-                              style: TextStyle(
-                                color: Colors.grey,
-                                fontSize: 20,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      SizedBox(height: 8.0),
-                      Container(
-                        width: 300,
-                        child: RichText(
-                          text: TextSpan(
-                            children: [
-                              TextSpan(
-                                text:
-                                    'UXR/UX: You can only bring one item to a remote island to assist your research of native use of tools and usability. What do you bring? #TellMeAboutYou',
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  // fontWeight: FontWeight.bold,
-                                  color: Colors.black,
-                                ),
-                              ),
-                            ],
+                      Row(
+                        children: [
+                          SvgPicture.asset(
+                            'assets/comment_icon.svg',
+                            height: 20,
                           ),
-                        ),
+                          SizedBox(width: 4.0),
+                          Text(
+                            '123',
+                            style: TextStyle(fontSize: 16),
+                          ),
+                          SizedBox(width: 32.0),
+                          SvgPicture.asset(
+                            'assets/retweet_icon.svg',
+                            height: 16,
+                          ),
+                          SizedBox(width: 4.0),
+                          Text(
+                            '123',
+                            style: TextStyle(fontSize: 16),
+                          ),
+                          SizedBox(width: 32.0),
+                          SvgPicture.asset(
+                            'assets/heart_icon.svg',
+                            height: 16,
+                          ),
+                          SizedBox(width: 4.0),
+                          Text(
+                            '123',
+                            style: TextStyle(fontSize: 16),
+                          ),
+                          SizedBox(width: 32.0),
+                          SvgPicture.asset(
+                            'assets/share_icon.svg',
+                            height: 16,
+                          ),
+                          SizedBox(width: 4.0),
+                          Text(
+                            '123',
+                            style: TextStyle(fontSize: 16),
+                          ),
+                        ],
                       ),
                     ],
-                  ),
+                  )
                 ],
               ),
             ],
           ),
-        ],
+        ),
       ),
     );
   }
