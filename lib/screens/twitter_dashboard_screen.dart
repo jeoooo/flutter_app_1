@@ -1,8 +1,9 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, library_private_types_in_public_api, use_super_parameters, unnecessary_import
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, library_private_types_in_public_api, use_super_parameters, unnecessary_import, deprecated_member_use
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_svg/svg.dart';
 import 'widgets/tweet.dart';
 import 'widgets/twitter_navbar.dart';
 
@@ -22,20 +23,28 @@ class _TwitterDashboardState extends State<TwitterDashboard> {
       tabBar: CupertinoTabBar(
         items: [
           BottomNavigationBarItem(
-            icon: Icon(CupertinoIcons.home),
-            label: 'Home',
+            activeIcon: SvgPicture.asset('assets/home_icon.svg',
+                color: Color(0xFF4C9EEB)),
+            icon: SvgPicture.asset('assets/home_icon.svg'),
+            // label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(CupertinoIcons.search),
-            label: 'Search',
+            activeIcon: SvgPicture.asset('assets/search_icon.svg',
+                color: Color(0xFF4C9EEB)),
+            icon: SvgPicture.asset('assets/search_icon.svg'),
+            // label: 'Search',
           ),
           BottomNavigationBarItem(
-            icon: Icon(CupertinoIcons.bell),
-            label: 'Notifications',
+            activeIcon: SvgPicture.asset('assets/bell_icon.svg',
+                color: Color(0xFF4C9EEB)),
+            icon: SvgPicture.asset('assets/bell_icon.svg'),
+            // label: 'Notifications',
           ),
           BottomNavigationBarItem(
-            icon: Icon(CupertinoIcons.person),
-            label: 'Profile',
+            activeIcon: SvgPicture.asset('assets/mail_icon.svg',
+                color: Color(0xFF4C9EEB)),
+            icon: SvgPicture.asset('assets/mail_icon.svg'),
+            // label: 'Profile',
           ),
         ],
         currentIndex: _selectedIndex,
