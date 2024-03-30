@@ -1,0 +1,92 @@
+[
+    {
+        "name": "John Doe",
+        "username": "@johndoe",
+        "time": "2024-03-30T12:00:00Z",
+        "tweet": "This is a sample tweet. #TwitterMock",
+        "comments": 10,
+        "retweets": 20,
+        "likes": 50
+    },
+    {
+        "name": "Jane Smith",
+        "username": "@janesmith",
+        "time": "2024-03-29T14:30:00Z",
+        "tweet": "Just posted a new photo. #SelfieSunday",
+        "comments": 5,
+        "retweets": 15,
+        "likes": 35
+    },
+    {
+        "name": "Alice Johnson",
+        "username": "@alice",
+        "time": "2024-03-28T08:45:00Z",
+        "tweet": "Excited for the weekend! 🎉",
+        "comments": 8,
+        "retweets": 12,
+        "likes": 40
+    },
+    {
+        "name": "Bob Anderson",
+        "username": "@bob_anderson",
+        "time": "2024-03-27T20:15:00Z",
+        "tweet": "Just finished reading a great book. Highly recommended! 📚",
+        "comments": 15,
+        "retweets": 25,
+        "likes": 60
+    },
+    {
+        "name": "Emily Taylor",
+        "username": "@emilyt",
+        "time": "2024-03-26T10:20:00Z",
+        "tweet": "Had a wonderful day exploring the city. #TravelTuesday",
+        "comments": 6,
+        "retweets": 18,
+        "likes": 55
+    },
+    {
+        "name": "Michael Brown",
+        "username": "@mikebrown",
+        "time": "2024-03-25T15:00:00Z",
+        "tweet": "Just launched my new website. Check it out! 💻 #WebDevelopment",
+        "comments": 12,
+        "retweets": 30,
+        "likes": 70
+    },
+    {
+        "name": "Samantha Clark",
+        "username": "@sam_clark",
+        "time": "2024-03-24T18:30:00Z",
+        "tweet": "Watching my favorite TV show. Can't wait for the next episode! 📺",
+        "comments": 7,
+        "retweets": 14,
+        "likes": 45
+    },
+    {
+        "name": "David Roberts",
+        "username": "@davidr",
+        "time": "2024-03-23T11:45:00Z",
+        "tweet": "Attending a conference today. Learning a lot! #Networking",
+        "comments": 9,
+        "retweets": 22,
+        "likes": 65
+    },
+    {
+        "name": "Olivia Wilson",
+        "username": "@oliviaw",
+        "time": "2024-03-22T09:10:00Z",
+        "tweet": "Morning coffee is the best part of the day. ☕️ #CoffeeLover",
+        "comments": 11,
+        "retweets": 28,
+        "likes": 75
+    },
+    {
+        "name": "Daniel Martinez",
+        "username": "@danm",
+        "time": "2024-03-21T13:20:00Z",
+        "tweet": "Enjoying a hike in the mountains. #Nature",
+        "comments": 10,
+        "retweets": 20,
+        "likes": 55
+    }
+]

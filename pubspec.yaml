@@ -38,3 +38,6 @@ flutter:
     - assets/home_icon.svg
     - assets/search_icon.svg
     - assets/mail_icon.svg
+
+    # mock api
+    - assets/twitter_api.json
