@@ -13,6 +13,9 @@ dependencies:
   # insert svg
   flutter_svg: ^2.0.10+1
 
+  # for splash screen
+  flutter_native_splash: ^2.4.0
+
   flutter:
     sdk: flutter
 

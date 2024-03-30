@@ -4,8 +4,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_app_1/screens/twitter_dashboard_screen.dart';
 
 import 'package:flutter_app_1/screens/auth_login_screen.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 void main() {
+  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   runApp(const MainApp());
 }
 
