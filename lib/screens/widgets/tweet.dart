@@ -5,9 +5,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class Tweet extends StatelessWidget {
-  const Tweet({
-    super.key,
-  });
+  String? name, username, time, tweet;
+  int? comments, retweets, likes;
+
+  Tweet(
+      {super.key,
+      // user data
+      this.name,
+      this.username,
+      this.time,
+      // user tweet
+      this.tweet,
+      // tweet stats
+      this.comments,
+      this.retweets,
+      this.likes});
 
   @override
   Widget build(BuildContext context) {
