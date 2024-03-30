@@ -7,9 +7,9 @@ import 'package:flutter_svg/svg.dart';
 class TwitterNavbar extends StatelessWidget
     implements ObstructingPreferredSizeWidget {
   const TwitterNavbar({
-    Key? key,
+    super.key,
     required this.type,
-  }) : super(key: key);
+  });
 
   final TwitterNavbarType type;
 
