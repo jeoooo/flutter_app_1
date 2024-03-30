@@ -50,7 +50,8 @@ class Tweet extends StatelessWidget {
         ),
       ),
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.only(
+            left: 8.0, right: 8.0, top: 16.0, bottom: 16.0),
         child: Container(
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
