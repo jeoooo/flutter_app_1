@@ -3,6 +3,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_app_1/screens/widgets/twitter_navbar.dart';
 import 'package:flutter_svg/svg.dart';
 import 'widgets/news_feed.dart';
 
@@ -59,8 +60,16 @@ class _TwitterDashboardState extends State<TwitterDashboard> {
             return NewsFeed();
           case 1:
             // Placeholder for Search tab
-            return Center(
-              child: Text('Search Tab'),
+            return CupertinoPageScaffold(
+              navigationBar: TwitterNavbar(type: TwitterNavbarType.search),
+              backgroundColor: Colors.white,
+              child: SafeArea(
+                child: Column(
+                  children: [
+                    Text('data'),
+                  ],
+                ),
+              ),
             );
           case 2:
             // Placeholder for Notifications tab

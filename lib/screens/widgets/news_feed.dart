@@ -14,7 +14,7 @@ class NewsFeed extends StatelessWidget {
   Widget build(BuildContext context) {
     return CupertinoTabView(
       builder: (context) => CupertinoPageScaffold(
-        navigationBar: TwitterNavbar(),
+        navigationBar: TwitterNavbar(type: TwitterNavbarType.profile),
         backgroundColor: Colors.white,
         child: SafeArea(
           child: Column(
