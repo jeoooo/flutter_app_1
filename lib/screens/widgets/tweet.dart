@@ -1,10 +1,10 @@
-// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, library_private_types_in_public_api, use_super_parameters, prefer_const_literals_to_create_immutables, unused_import, sized_box_for_whitespace, unnecessary_import
+// ignore_for_file: unnecessary_import, prefer_const_constructors, avoid_unnecessary_containers, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class Tweet extends StatelessWidget {
+class Tweet extends StatefulWidget {
   String? name, username, time, tweet;
   int? comments, retweets, likes;
 
@@ -21,6 +21,11 @@ class Tweet extends StatelessWidget {
       this.retweets,
       this.likes});
 
+  @override
+  State<Tweet> createState() => _TweetState();
+}
+
+class _TweetState extends State<Tweet> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -76,7 +81,7 @@ class Tweet extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 6.0, bottom: 20.0),
-                    child: Container(
+                    child: SizedBox(
                       width: 300,
                       child: Text(
                           'datadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadata'),
