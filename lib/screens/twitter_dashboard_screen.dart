@@ -4,8 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
-import 'widgets/tweet.dart';
-import 'widgets/twitter_navbar.dart';
+import 'widgets/news_feed.dart';
 
 class TwitterDashboard extends StatefulWidget {
   const TwitterDashboard({Key? key}) : super(key: key);
@@ -57,19 +56,7 @@ class _TwitterDashboardState extends State<TwitterDashboard> {
       tabBuilder: (context, index) {
         switch (index) {
           case 0:
-            return CupertinoTabView(
-              builder: (context) => CupertinoPageScaffold(
-                navigationBar: TwitterNavbar(),
-                backgroundColor: Colors.white,
-                child: SafeArea(
-                  child: Column(
-                    children: [
-                      Tweet(),
-                    ],
-                  ),
-                ),
-              ),
-            );
+            return NewsFeed();
           case 1:
             // Placeholder for Search tab
             return Center(
