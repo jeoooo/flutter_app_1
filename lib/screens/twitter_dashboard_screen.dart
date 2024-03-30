@@ -3,7 +3,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_app_1/screens/widgets/twitter_navbar.dart';
 import 'package:flutter_svg/svg.dart';
 import 'widgets/news_feed.dart';
 import 'widgets/twitter_search.dart';
