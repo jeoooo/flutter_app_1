@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_app_1/screens/widgets/twitter_navbar.dart';
 import 'package:flutter_app_1/screens/widgets/twitter_navbar_item.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'widgets/news_feed.dart';
 import 'widgets/twitter_message_search_bar.dart';
 import 'widgets/twitter_search.dart';
@@ -56,6 +55,9 @@ class _TwitterDashboardState extends State<TwitterDashboard> {
               child: SafeArea(
                 child: Column(children: [
                   TwitterMessageSearchBar(),
+                  Container(
+                    child: Column(children: []),
+                  )
                 ]),
               ),
             );
