@@ -55,46 +55,54 @@ class _TwitterDashboardState extends State<TwitterDashboard> {
               child: SafeArea(
                 child: Column(children: [
                   TwitterMessageSearchBar(),
-                  Container(
-                    decoration: BoxDecoration(
-                      border: Border(
-                        top: BorderSide(
-                          color: Colors.grey,
-                          width: 1.0,
-                        ),
-                        bottom: BorderSide(
-                          color: Colors.grey,
-                          width: 1.0,
-                        ),
-                      ),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        children: [
-                          CircleAvatar(
-                            backgroundColor: Colors.blue,
-                            radius: 32,
-                          ),
-                          SizedBox(
-                            width: 8,
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Row(
-                                children: [
-                                  Text('Juan Dela Cruz'),
-                                  SizedBox(width: 136),
-                                  Text('12/02/19'),
-                                ],
+                  Expanded(
+                    // Add Expanded widget here
+                    child: ListView.builder(
+                      itemCount: 10,
+                      itemBuilder: (context, index) {
+                        return Container(
+                          decoration: BoxDecoration(
+                            border: Border(
+                              top: BorderSide(
+                                color: Colors.grey,
+                                width: 1.0,
                               ),
-                              SizedBox(height: 8.0),
-                              Text('You: You’re very welcome AzizDjan!'),
-                            ],
+                              bottom: BorderSide(
+                                color: Colors.grey,
+                                width: 1.0,
+                              ),
+                            ),
                           ),
-                        ],
-                      ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Row(
+                              children: [
+                                CircleAvatar(
+                                  backgroundColor: Colors.blue,
+                                  radius: 32,
+                                ),
+                                SizedBox(
+                                  width: 8,
+                                ),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Row(
+                                      children: [
+                                        Text('Juan Dela Cruz'),
+                                        SizedBox(width: 136),
+                                        Text('12/02/19'),
+                                      ],
+                                    ),
+                                    SizedBox(height: 8.0),
+                                    Text('You: You’re very welcome AzizDjan!'),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                        );
+                      },
                     ),
                   ),
                 ]),
