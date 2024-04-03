@@ -17,15 +17,15 @@ class AuthLogin extends StatefulWidget {
 class _AuthLoginState extends State<AuthLogin> {
   @override
   Widget build(BuildContext context) {
-    return CupertinoPageScaffold(
+    return Scaffold(
       backgroundColor: Colors.white,
-      navigationBar: CupertinoNavigationBar(
+      appBar: CupertinoNavigationBar(
         middle: SvgPicture.asset(
           'assets/twitter_logo.svg',
           height: 24,
         ),
       ),
-      child: SafeArea(
+      body: SafeArea(
         child: Column(
           children: [
             Container(

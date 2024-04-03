@@ -1,7 +1,7 @@
 // ignore_for_file: unnecessary_import, prefer_const_constructors, avoid_unnecessary_containers, prefer_const_literals_to_create_immutables, must_be_immutable
 
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' as material;
 import 'package:flutter_svg/svg.dart';
 
 class Tweet extends StatefulWidget {
@@ -32,7 +32,7 @@ class _TweetState extends State<Tweet> {
       decoration: BoxDecoration(
         border: Border(
           bottom: BorderSide(
-            color: Colors.grey, // Replace with desired color
+            color: material.Colors.grey, // Replace with desired color
             width: 1, // Adjust the width as needed
           ),
         ),
@@ -44,8 +44,8 @@ class _TweetState extends State<Tweet> {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              CircleAvatar(
-                backgroundColor: Colors.blue,
+              material.CircleAvatar(
+                backgroundColor: material.Colors.blue,
                 radius: 32,
               ),
               SizedBox(width: 8.0),
@@ -57,24 +57,28 @@ class _TweetState extends State<Tweet> {
                       text: 'Juan Dela Cruz',
                       style: TextStyle(
                           fontSize: 18,
-                          color: Colors.black,
+                          color: material.Colors.black,
                           fontWeight: FontWeight.bold),
                       children: [
                         TextSpan(
                           text: ' ',
-                          style: TextStyle(fontSize: 18, color: Colors.grey),
+                          style: TextStyle(
+                              fontSize: 18, color: material.Colors.grey),
                         ),
                         TextSpan(
                           text: '@username',
-                          style: TextStyle(fontSize: 18, color: Colors.grey),
+                          style: TextStyle(
+                              fontSize: 18, color: material.Colors.grey),
                         ),
                         TextSpan(
                           text: ' • ',
-                          style: TextStyle(fontSize: 18, color: Colors.grey),
+                          style: TextStyle(
+                              fontSize: 18, color: material.Colors.grey),
                         ),
                         TextSpan(
                           text: '12h',
-                          style: TextStyle(fontSize: 18, color: Colors.grey),
+                          style: TextStyle(
+                              fontSize: 18, color: material.Colors.grey),
                         ),
                       ],
                     ),
@@ -84,7 +88,8 @@ class _TweetState extends State<Tweet> {
                     child: SizedBox(
                       width: 300,
                       child: Text(
-                          'datadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadata'),
+                        'datadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadata',
+                      ),
                     ),
                   ),
                   Row(
