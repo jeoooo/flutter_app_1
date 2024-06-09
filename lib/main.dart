@@ -14,14 +14,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    NavbarType navbarType = NavbarType.NOTIFICATIONS;
     return MaterialApp(
       title: 'Hello, World!',
       home: Scaffold(
         appBar: PreferredSize(
-          preferredSize: const Size.fromHeight(kToolbarHeight),
-          child: TwitterNavbar(
-            navbarType: NavbarType.SEARCH,
-          ),
+          preferredSize: Size.fromHeight(
+              navbarType == NavbarType.NOTIFICATIONS ? 100 : kToolbarHeight),
+          child: TwitterNavbar(navbarType: navbarType),
         ),
         body: const Center(
           child: Text('Hello, World!'),
