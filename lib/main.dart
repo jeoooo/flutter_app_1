@@ -1,29 +1,32 @@
-// ignore_for_file: library_private_types_in_public_api, use_super_parameters, prefer_const_constructors, unused_import
+// ignore_for_file: use_super_parameters, prefer_const_constructors
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app_1/screens/twitter_dashboard_screen.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
-import 'package:flutter_app_1/screens/auth_login_screen.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'widgets/twitter_navbar.dart';
 
 void main() {
-  // WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
-  // FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
-  runApp(const MainApp());
+  runApp(const MyApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return CupertinoApp(
-      initialRoute: '/dashboard',
-      routes: {
-        '/': (context) => AuthLogin(),
-        '/dashboard': (context) => TwitterDashboard(),
-      },
+    return MaterialApp(
+      title: 'Hello, World!',
+      home: Scaffold(
+        appBar: PreferredSize(
+          preferredSize: const Size.fromHeight(kToolbarHeight),
+          child: TwitterNavbar(
+            navbarType: NavbarType.SEARCH,
+          ),
+        ),
+        body: const Center(
+          child: Text('Hello, World!'),
+        ),
+      ),
     );
   }
 }
